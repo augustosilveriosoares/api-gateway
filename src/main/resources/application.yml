@@ -30,3 +30,18 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+
+springdoc:
+  enable-native-support: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls:
+      - url: /v3/api-docs
+        name: API Gateway Service
+      - url: /book-service/v3/api-docs
+        name: Book Service
+        
